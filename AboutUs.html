@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kibellan Solutions - About Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      /* ===================== GLOBAL STYLES ===================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        background: url("https://images.unsplash.com/photo-1581056771085-3ce30d907416?w=1200&auto=format&fit=crop&q=80")
+          no-repeat center center/cover;
+        color: #333;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* ===================== NAVBAR ===================== */
+      header {
+        background: #003366;
+        color: #fff;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #00aaff;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          position: absolute;
+          top: 65px;
+          right: 0;
+          background: #003366;
+          flex-direction: column;
+          width: 220px;
+          display: none;
+          padding: 20px;
+          border-radius: 0 0 8px 8px;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+
+      /* ===================== SECTION TITLES ===================== */
+      .section-title {
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      .section-title h2 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 10px;
+      }
+
+      .section-title p {
+        font-size: 1.1rem;
+        color: #666;
+      }
+
+      /* ===================== ABOUT CONTENT ===================== */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 60px;
+      }
+
+      .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #e6f0fa;
+        border-radius: 20px;
+        padding: 30px;
+      }
+
+      .about-image i {
+        color: #0077cc;
+        font-size: 5rem;
+      }
+
+      .about-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #003366;
+      }
+
+      .about-content p {
+        margin-bottom: 15px;
+        color: #555;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #0077cc;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #005fa3;
+      }
+
+      /* ===================== FEATURE CARDS ===================== */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: #0077cc;
+        margin-bottom: 15px;
+      }
+
+      .feature-card h3 {
+        color: #003366;
+        margin-bottom: 10px;
+      }
+
+      .feature-card p {
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      /* ===================== FOOTER ===================== */
+      footer {
+        background: #003366;
+        color: #fff;
+        padding: 60px 0 20px;
+        margin-top: 80px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-column h3 {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        border-left: 4px solid #0077cc;
+        padding-left: 10px;
+      }
+
+      .footer-column p,
+      .footer-links li {
+        font-size: 0.95rem;
+        color: #ddd;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: #ddd;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: #fff;
+      }
+
+      .newsletter {
+        display: flex;
+        gap: 10px;
+      }
+
+      .newsletter input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .newsletter button {
+        background: #0077cc;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .newsletter button:hover {
+        background: #005fa3;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-size: 0.85rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 15px;
+      }
+
+      /* ===================== STICKY QUOTE ===================== */
+      .sticky-quote {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #0077cc;
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        z-index: 999;
+      }
+
+      .sticky-quote:hover {
+        background: #005fa3;
+      }
+
+      /* ===================== RESPONSIVE ===================== */
+      @media (max-width: 768px) {
+        .about-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .about-image {
+          margin-bottom: 20px;
+        }
+
+        .newsletter {
+          flex-direction: column;
+        }
+
+        .newsletter input,
+        .newsletter button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="logo">Kibellan</a>
+        <i class="fas fa-bars hamburger" id="hamburger"></i>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="partnerships.html">Partnerships</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- About Us Page -->
+    <section id="about-page" class="page-content">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Kibellan Solutions</h2>
+          <p>Your trusted partner in healthcare supply chain management</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-image">
+            <i class="fas fa-history"></i>
+          </div>
+          <div>
+            <h3>Our Story</h3>
+            <p>
+              Founded in 2005, Kibellan Solutions has grown from a small medical
+              supplier to a global healthcare solutions provider. Our mission
+              has always been to ensure that quality healthcare products are
+              accessible to everyone, everywhere.
+            </p>
+            <p>
+              We partner with manufacturers, healthcare providers, and NGOs to
+              create efficient supply chains that deliver critical medical
+              supplies where they're needed most.
+            </p>
+            <a href="partnerships.html" class="btn" style="margin-top: 20px"
+              >Learn More About Us</a
+            >
+          </div>
+        </div>
+
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>Our Vision</h3>
+            <p>
+              To be the world's most trusted healthcare supply partner, enabling
+              better health outcomes through reliable access to quality medical
+              products.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Our Mission</h3>
+            <p>
+              To provide healthcare institutions with reliable, affordable, and
+              high-quality medical supplies through efficient logistics and
+              ethical business practices.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Our Values</h3>
+            <p>
+              Quality, Integrity, Reliability, and Innovation are the core
+              values that guide everything we do at Kibellan Solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Kibellan Solutions</h3>
+            <p>
+              Supplying quality healthcare products and medical supplies to
+              institutions worldwide.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> Products</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="partnerships.html"
+                  ><i class="fas fa-chevron-right"></i> Partnerships</a
+                >
+              </li>
+              <li>
+                <a href="contacts.html"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fas fa-map-marker-alt"></i> 123 Healthcare Ave,
+                  Medical District</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-phone"></i> +1 (555) 123-4567</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-envelope"></i> info@kibellansolutions.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>
+              Subscribe to our newsletter for updates on new products and
+              industry insights.
+            </p>
+            <div class="newsletter">
+              <input
+                type="email"
+                id="newsletter-email"
+                placeholder="Your email address"
+              />
+              <button id="subscribe-btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Kibellan Solutions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sticky Quote Button -->
+    <div class="sticky-quote" id="quote-btn">
+      <i class="fas fa-envelope"></i> Request a Quote
+    </div>
+
+    <!-- ===================== JAVASCRIPT ===================== -->
+    <script>
+      // Mobile nav toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Smooth scroll for "Request a Quote" button
+      document
+        .getElementById("quote-btn")
+        .addEventListener("click", function () {
+          location.href = "contacts.html";
+        });
+
+      // Newsletter subscribe button
+      document
+        .getElementById("subscribe-btn")
+        .addEventListener("click", function () {
+          const email = document.getElementById("newsletter-email").value;
+          if (email.trim() === "") {
+            alert("Please enter your email address.");
+          } else {
+            alert("Thank you for subscribing, " + email + "!");
+            document.getElementById("newsletter-email").value = "";
+          }
+        });
+    </script>
+  </body>
+</html>
