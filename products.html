@@ -892,59 +892,107 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+      <!-- Footer -->
+    <footer>
       <div class="container">
         <div class="footer-content">
-          <div>
+          <div class="footer-column">
             <h3>Kibellan Solutions</h3>
             <p>
               Supplying quality healthcare products and medical supplies to
-              institutions nationwide.
+              institutions worldwide.
             </p>
           </div>
 
-          <div>
+          <div class="footer-column">
             <h3>Quick Links</h3>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="products.html">Products</a></p>
-            <p><a href="Aboutus.html">About Us</a></p>
-            <p><a href="partnerships.html">Partnerships</a></p>
-            <p><a href="contacts.html">Contact</a></p>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Products</a
+                >
+              </li>
+              <li>
+                <a href="AboutUs.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="Partnerships.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Partnerships</a
+                >
+              </li>
+              <li>
+                <a href="contacts.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+            </ul>
           </div>
 
-          <div>
+          <div class="footer-column">
             <h3>Contact Us</h3>
-            <p>123 Healthcare Ave, Medical District</p>
-            <p>+254 704 498 509</p>
-            <p>info@kibellansolutions.com</p>
+            <ul class="footer-links">
+              <li>
+                <a href="https://www.google.com/maps/search/akamba+building+machakos/@-1.5208329,37.2677628,80m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDkxNi4wIKXMDSoASAFQAw%3D%3D"
+                  ><i class="fas fa-map-marker-alt"></i> 3rd Floor,Akamba
+                  Building, Machakos Town
+                </a>
+              </li>
+              <li>
+                <a href="tel:+254704498509"><i class="fas fa-phone"></i> +254 704 498509</a>
+              </li>
+              <li>
+                <a href="mailto:kibellansolutions@gmail.com">
+                  <i class="fas fa-envelope"></i>    info@kibellansolutions.com</a
+                >
+              </li>
+            </ul>
           </div>
 
-          <div>
+          <div class="footer-column">
             <h3>Newsletter</h3>
-            <p>Get product updates & industry insights</p>
+            <p>
+              Subscribe to our newsletter for updates on new products and
+              industry insights.
+            </p>
             <div class="newsletter">
-              <input
-                type="email"
-                placeholder="Your email address"
-                aria-label="email"
-              />
-              <button aria-label="subscribe">Subscribe</button>
+              <input type="email" placeholder="Your email address" />
+              
+              <a href="Partnerships.html"><button>Subscribe</button></a>
             </div>
           </div>
         </div>
 
-        <div style="text-align: center; color: #cfe7ff; font-size: 0.95rem">
-          &copy; <span id="year"></span> Kibellan Solutions. All rights
-          reserved.
+        <div class="footer-bottom">
+          <p>&copy; 2025 Kibellan Solutions. All rights reserved.</p>
+          <p style="margin: 0; font-size: 13px; color: #777">
+          Crafted with <span style="color: red">❤</span> by
+          <a
+            href="https://wa.me/254723562484?text=Hello%20there,%20I%20Need%20a%20Website"
+            target="_blank"
+            style="
+              color: rgba(0, 0, 255, 0.822);
+              text-decoration: none;
+              font-weight: 500;
+            "
+          >
+            @Saraha_Devs
+          </a>
+        </p>
         </div>
       </div>
     </footer>
 
-    <!-- Sticky Quote -->
-    <button class="sticky-quote" id="stickyQuote" aria-label="Request a quote">
-      <i class="fas fa-envelope"></i> Request a Quote
-    </button>
+    <!-- Sticky Quote Button -->
+    <div class="sticky-quote">
+      <a href="products.html"><i class="fas fa-envelope"></i> Request a Quote
+    </div></a>
 
     <!-- Modal (hidden by default) -->
     <div class="modal" id="modal" role="dialog" aria-hidden="true">
