@@ -78,127 +78,102 @@
         padding: 0 20px;
       }
 
-      /* ===== HEADER & NAVBAR ===== */
-      header {
-        background: #0072ce;
-        padding: 15px 0;
-        color: #fff;
-      }
-      .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 700;
-        font-size: 1.5rem;
-      }
-      .logo-icon i {
-        font-size: 1.5rem;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-      }
+      /* ================= HEADER ================= */
+header {
+  position: fixed;
+  top:0px;
+ height: 13.5%;
+  width: 100%;
+  z-index: 100;
+  background: rgb(7, 110, 151);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  transition: background 0.3s;
+}
 
-      .logo-icon {
-        width: 40px;
-        height: 40px;
-        background: var(--gradient-primary);
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-        color: white;
-        font-size: 20px;
-      }
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-      .logo-text {
-        font-size: 24px;
-        font-weight: 700;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      nav {
-        position: relative;
-      }
-      nav ul {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-      }
-      nav ul li a {
-        color: #fff;
-        padding: 8px 12px;
-        border-radius: 5px;
-        transition: background 0.3s;
-      }
-      nav ul li a:hover {
-        background: rgba(255, 255, 255, 0.2);
-      }
-      .mobile-menu-btn {
-        display: none;
-        font-size: 1.8rem;
-        cursor: pointer;
-        color: #fff;
-        background: none;
-        border: none;
-      }
-      .header-actions .btn {
-        padding: 12px 28px;
-        border-radius: 50px;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-block;
-        transition: 0.3s;
-        font-size: 16px;
-        cursor: pointer;
-        border: none;
-        background: #ff7f50;
-        color: #fff;
-      }
-      .header-actions .btn:hover {
-        transform: translateY(-3px);
-      }
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-icon {
+  font-size: 1.5rem;
+  color: var(--red);
+}
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
 
-      /* ===== MOBILE ===== */
-      @media (max-width: 768px) {
-        .mobile-menu-btn {
-          display: block;
-        }
-        nav ul {
-          display: none; /* hide by default */
-          position: absolute;
-          top: 70px;
-          right: 0;
-          flex-direction: column;
-          width: 200px;
-          background: rgba(0, 114, 206, 0.95);
-          padding: 10px 0;
-          border-radius: 8px;
-          z-index: 9999;
-        }
-        nav ul.active {
-          display: flex;
-        }
-        nav ul li {
-          text-align: center;
-          margin: 10px 0;
-        }
-        .header-actions {
-          margin-top: 10px;
-          width: 100%;
-          justify-content: center;
-        }
-      }
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: black;
+}
 
+/* CTA Button */
+.header-actions .btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: rgb(241, 6, 210);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header-actions .btn:hover {
+  background: var(--gold);
+  color: #111;
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 0px;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    margin-top: auto;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}
       /* ===== STICKY QUOTE ===== */
       .sticky-quote {
         position: fixed;
@@ -257,188 +232,255 @@
         transform: translateY(-3px);
       }
 
-      .mobile-menu-btn {
-        display: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--primary);
-        background: none;
-        border: none;
-      }
-      /* ================= HERO ================= */
+     /* ================= HERO (UPGRADED) ================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
 
-      .hero {
-        position: relative;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        overflow: hidden;
-        background: #11111100;
-      }
+/* Background Reveal */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://plus.unsplash.com/premium_photo-1672759455907-bdaef741cd88?w=1600&auto=format&fit=crop&q=80")
+    no-repeat center center/cover;
+  clip-path: inset(100% 0 0 0);
+  animation: revealImage 2.5s ease forwards;
+  z-index: 0;
+}
 
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: url("https://plus.unsplash.com/premium_photo-1672759455907-bdaef741cd88?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2VzJTIwZm9yJTIwYSUyMG1lZGljYWwlMjBzdXBwbGllcyUyMGNvbXBhbnl8ZW58MHx8MHx8fDA%3D")
-          no-repeat center center/cover;
-        clip-path: inset(100% 0 0 0);
-        animation: revealImage 2.5s ease forwards;
-        z-index: 0;
-      }
+@keyframes revealImage {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
 
-      @keyframes revealImage {
-        to {
-          clip-path: inset(0 0 0 0);
-        }
-      }
+/* Dark overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.048) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
 
-      .hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0);
-        z-index: 1;
-      }
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 0 20px;
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
 
-      .hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 800px;
-        padding: 0 20px;
-        animation: fadeInUp 2s ease;
-      }
+/* Logo drip animation */
+.paint-logo {
+  font-size: 2.4rem;
+  font-style: oblique;
+  font-weight: 700;
+  margin-bottom: 25px;
+  display: inline-block;
+  position: relative;
+  animation: drip 2s ease forwards;
+  color: #fff;
+}
+.paint-logo::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 12px;
+  height: 20px;
+  background: var(--red);
+  border-radius: 50%;
+  transform: translateX(-50%) scaleY(0);
+  animation: drop 1.8s ease 1s forwards;
+}
 
-      .paint-logo {
-        font-size: 2.2rem;
-        font-style: oblique;
-        font-weight: 700;
-        margin-bottom: 25px;
-        display: inline-block;
-        position: relative;
-        animation: drip 2s ease forwards;
-        color: #fff;
-      }
+/* HEADLINE 🔥 Gradient + Fade Shift */
+.hero h1 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    270deg,
+    var(--red),
+    rgb(236, 171, 5),
+    var(--blue),
+    var(--green),
+    var(--red)
+  );
+  background-size: 500% 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorWave 8s linear infinite, fadeSlideIn 2s ease forwards;
+  opacity: 0;
+}
 
-      .paint-logo::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        width: 12px;
-        height: 20px;
-        background: var(--red);
-        border-radius: 50%;
-        transform: translateX(-50%) scaleY(0);
-        animation: drop 1.8s ease 1s forwards;
-      }
+@keyframes colorWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-      .hero h1 {
-        font-size: 3.2rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-        background: linear-gradient(
-          90deg,
-          var(--red),
-          var(--gold),
-          var(--blue),
-          var(--green)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: colorShift 8s linear infinite;
-        background-size: 200% 200%;
-      }
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      @keyframes colorShift {
-        0% {
-          background-position: 0% 50%;
-        }
-        100% {
-          background-position: 200% 50%;
-        }
-      }
+/* Paragraph */
+.hero p {
+  font-size: 1.8rem;
+  margin-bottom: 35px;
+  color: whitesmoke;
+  line-height: 1.6;
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
 
-      .hero p {
-        font-size: 1.3rem;
-        margin-bottom: 30px;
-        color: #f1f1f1;
-      }
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
 
-      .hero-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
+.btn {
+  padding: 12px 28px;
+  border-radius: 35px;
+  font-weight: 600;
+  background: rgb(243, 7, 184);
+  color: white;
+  text-decoration: none;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.644);
+}
+.btn:hover {
+  background: rgba(0, 0, 0, 0.726);
+  color: whitesmoke;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 200, 0, 0.5);
+}
 
-      .btn {
-        padding: 12px 25px;
-        border-radius: 30px;
-        font-weight: 600;
-        background: rgb(248, 3, 195);
-        color: white;
-        text-decoration: none;
-        transition: 0.3s;
-      }
+.btn-outline {
+  background: goldenrod;
+  border: 2px solid transparent;
+  color: black;
+}
+.btn-outline:hover {
+  background: white;
+  color: #111;
+  transform: translateY(-4px) scale(1.05);
+}
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-align: center;
+  opacity: 0; /* start hidden */
+  transform: translateY(30px);
+  animation: fadeSlideIn 2s ease forwards;
+}
 
-      .btn:hover {
-        background: rgb(133, 95, 1);
-        transform: translateY(-3px);
-      }
+.hero h1 span {
+  background: linear-gradient(
+    270deg,
+    #ff4d4d,
+    #ffb84d,
+    #4d79ff,
+    #00cc88,
+    #ff4d4d
+  );
+  background-size: 500% 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: colorWave 8s linear infinite;
+  display: inline-block;
+}
 
-      .btn-outline {
-        background: transparent;
-        border: 2px solid white;
-        color: white;
-      }
+@keyframes colorWave {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
 
-      .btn-outline:hover {
-        background: white;
-        color: #333;
-      }
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      @keyframes drip {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
 
-      @keyframes drop {
-        to {
-          transform: translateX(-50%) scaleY(1);
-        }
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+/* Animations */
+@keyframes drip {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes drop {
+  to {
+    transform: translateX(-50%) scaleY(1);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
       /* Trust Badges */
       .trust-badges {
-        background-color: var(--white);
+        background-color:skyblue;
         padding: 60px 0;
         text-align: center;
       }
 
       .trust-badges h3 {
         margin-bottom: 40px;
-        color: var(--dark);
+        color: black;
         font-size: 1.5rem;
       }
 
@@ -484,181 +526,18 @@
       .badge span {
         font-size: 14px;
         font-weight: 600;
-        color: var(--dark);
+        color: black;
       }
 
-      /* Products Section */
-      .products {
-        padding: 100px 0;
-        background-color: var(--light);
-      }
-
-      .section-title {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      .section-title h2 {
-        font-size: 2.5rem;
-        color: var(--dark);
-        margin-bottom: 20px;
-        position: relative;
-        display: inline-block;
-      }
-
-      .section-title h2::after {
-        content: "";
-        position: absolute;
-        width: 60px;
-        height: 4px;
-        background: var(--gradient-primary);
-        bottom: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
-
-      .section-title p {
-        color: var(--gray);
-        max-width: 700px;
-        margin: 0 auto;
-        font-size: 1.1rem;
-      }
-
-      .product-categories {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-
-      .category-btn {
-        padding: 12px 25px;
-        background-color: var(--white);
-        border: 1px solid var(--light-gray);
-        border-radius: 50px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: var(--transition);
-        color: var(--gray);
-      }
-
-      .category-btn.active,
-      .category-btn:hover {
-        background: var(--gradient-primary);
-        color: white;
-        border-color: var(--primary);
-        box-shadow: var(--shadow-sm);
-      }
-
-      .products-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 30px;
-      }
-
-      .product-card {
-        background-color: var(--white);
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: var(--shadow-sm);
-        transition: var(--transition);
-        position: relative;
-      }
-
-      .product-card:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .product-badge {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        background: var(--gradient-secondary);
-        color: white;
-        padding: 5px 12px;
-        border-radius: 50px;
-        font-size: 12px;
-        font-weight: 600;
-        z-index: 2;
-      }
-
-      .product-img {
-        height: 200px;
-        background: var(--light-blue);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .product-img i {
-        font-size: 64px;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        transition: var(--transition);
-      }
-
-      .product-card:hover .product-img i {
-        transform: scale(1.1);
-      }
-
-      .product-info {
-        padding: 20px;
-      }
-
-      .product-info h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
-
-      .product-info p {
-        color: var(--gray);
-        font-size: 14px;
-        margin-bottom: 20px;
-      }
-
-      .product-action {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .product-price {
-        font-weight: 700;
-        color: var(--primary);
-        font-size: 18px;
-      }
-
-      .add-to-cart {
-        background: var(--gradient-primary);
-        color: white;
-        border: none;
-        border-radius: 50px;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: var(--transition);
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .add-to-cart:hover {
-        background: var(--gradient-secondary);
-        transform: translateX(5px);
-      }
-
+      x
       /* Why Choose Us */
       .why-us {
         padding: 100px 0;
-        background-color: var(--white);
+        background-color: var(--white);  
+        /*background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80")
+          no-repeat center center/cover;*/
         position: relative;
+       
       }
 
       .features {
@@ -811,73 +690,7 @@
         position: absolute;
       }
 
-      /* Testimonials */
-      .testimonials {
-        padding: 100px 0;
-        background-color: var(--light);
-      }
-
-      .testimonial-slider {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .testimonial-card {
-        background-color: var(--white);
-        padding: 40px;
-        border-radius: 12px;
-        box-shadow: var(--shadow-md);
-        margin: 20px;
-        position: relative;
-      }
-
-      .testimonial-card::before {
-        content: "\201C";
-        font-size: 80px;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        color: var(--light-gray);
-        font-family: Arial, sans-serif;
-        line-height: 1;
-      }
-
-      .testimonial-text {
-        font-style: italic;
-        margin-bottom: 25px;
-        color: var(--dark);
-        font-size: 1.1rem;
-        position: relative;
-        z-index: 2;
-      }
-
-      .testimonial-author {
-        display: flex;
-        align-items: center;
-      }
-
-      .author-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: var(--gradient-primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 24px;
-        margin-right: 15px;
-      }
-
-      .author-info h4 {
-        margin-bottom: 5px;
-      }
-
-      .author-role {
-        color: var(--gray);
-        font-size: 14px;
-      }
-
+     
       /* Trust Signals */
       .trust-signals {
         padding: 80px 0;
@@ -1142,7 +955,7 @@
       }
 
       /* Responsive Styles */
-      @media (max-width: 992px) {
+      @media (max-width: 768px) {
         .hero h1 {
           font-size: 2.8rem;
         }
@@ -1198,60 +1011,62 @@
     </style>
   </head>
   <body>
-    <!-- Header -->
-    <header id="header">
-      <div class="container header-container">
-        <div class="logo">
-          <div class="logo-icon">
-            <i class="fas fa-plus"></i>
-          </div>
-          <div class="logo-text">Kibellan Solutions</div>
-        </div>
-        <nav>
-          <ul id="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="Partnerships.html">Partnerships</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-          </ul>
-          <button
-            class="mobile-menu-btn"
-            id="mobile-menu-toggle"
-            aria-label="Toggle navigation menu"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-        </nav>
-        <div class="header-actions">
-          <a href="#" class="btn btn-primary">Get Quote</a>
-        </div>
-      </div>
-    </header>
+    <!-- ================= HEADER ================= -->
+<header id="header">
+  <div class="container header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <div class="logo-icon"><i class="fas fa-plus"></i></div>
+      <div class="logo-text">Kibellan Solutions</div>
+    </div>
 
-    <!-- Home Page -->
-    <section id="home-page" class="page-content">
-      <!-- Hero Section -->
-      <div class="hero">
-        <div class="hero-animation" id="hero-animation"></div>
-        <div class="container hero-content">
-          <h1>Supplying Healthcare, Saving Lives</h1>
-          <p>
-            Kibellan Solutions is a trusted global supplier of medical
-            equipment, pharmaceuticals, and healthcare supplies to hospitals,
-            pharmacies, and NGOs worldwide.
-          </p>
-          <div class="hero-buttons">
-            <a href="products.html" class="btn btn-primary">Browse Products</a>
-            <a href="contacts.html" class="btn btn-secondary"
-              >Chat With Us a Quote</a
-            >
-            <a href="Partnerships.html" class="btn btn-secondary"
-              >Partner With Us</a
-            >
-          </div>
-        </div>
+    <!-- Navigation -->
+    <nav>
+      <!-- Hamburger -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Menu -->
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Partnerships.html">Partnerships</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- CTA -->
+    <div class="header-actions">
+      <a href="contacts.html" class="btn btn-primary">Get Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home-page" class="page-content">
+  <div class="hero">
+    <!-- Background handled via CSS -->
+    <div class="container hero-content">
+      <h1><span class="paint-logo">Kibellan</span></h1>
+      <h1>
+  <span>Supplying</span> <span>Healthcare</span>, <span>Saving Lives</span>
+</h1>
+
+      <p>
+        Kibellan Solutions is a trusted global supplier of medical equipment,
+        pharmaceuticals, and healthcare supplies to hospitals, pharmacies,
+        and NGOs worldwide.
+      </p>
+      <div class="hero-buttons">
+        <a href="products.html" class="btn">Browse Products</a>
+        <a href="contacts.html" class="btn btn-outline">Chat With Us</a>
+        <a href="Partnerships.html" class="btn btn-outline">Partner With Us</a>
       </div>
+    </div>
+  </div>
+</section>
 
       <!-- Trust Badges -->
       <section class="trust-badges">
@@ -1285,99 +1100,10 @@
           </div>
         </div>
       </section>
-
-      <!-- Products Section -->
-      <section class="products">
-        <div class="container">
-          <div class="section-title">
-            <h2>Our Healthcare Products</h2>
-            <p>
-              Discover our wide range of medical supplies, pharmaceuticals, and
-              healthcare equipment
-            </p>
-          </div>
-
-          <div class="product-categories">
-            <button class="category-btn active">All Products</button>
-            <button class="category-btn">Medicines</button>
-            <button class="category-btn">Equipment</button>
-            <button class="category-btn">Consumables</button>
-            <button class="category-btn">Wellness</button>
-          </div>
-
-          <div class="products-grid">
-            <div class="product-card">
-              <div class="product-badge">Bestseller</div>
-              <div class="product-img">
-                <i class="fas fa-pills"></i>
-              </div>
-              <div class="product-info">
-                <h3>Pharmaceuticals</h3>
-                <p>Wide range of generic and branded medicines</p>
-                <div class="product-action">
-                  <div class="product-price">From ksh.1,500</div>
-                  <button class="add-to-cart">
-                    <i class="fas fa-file-alt"></i> Quote
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-img">
-                <i class="fas fa-first-aid"></i>
-              </div>
-              <div class="product-info">
-                <h3>Medical Consumables</h3>
-                <p>Disposable gloves, masks, syringes and more</p>
-                <div class="product-action">
-                  <div class="product-price">From ksh.1,500</div>
-                  <button class="add-to-cart">
-                    <i class="fas fa-file-alt"></i> Quote
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-badge">New</div>
-              <div class="product-img">
-                <i class="fas fa-procedures"></i>
-              </div>
-              <div class="product-info">
-                <h3>Hospital Equipment</h3>
-                <p>Beds, monitors, and surgical equipment</p>
-                <div class="product-action">
-                  <div class="product-price">From ksh.15,000</div>
-                  <button class="add-to-cart">
-                    <i class="fas fa-file-alt"></i> Quote
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="product-card">
-              <div class="product-img">
-                <i class="fas fa-heartbeat"></i>
-              </div>
-              <div class="product-info">
-                <h3>Diagnostic Tools</h3>
-                <p>Blood pressure monitors, thermometers, etc.</p>
-                <div class="product-action">
-                  <div class="product-price">From ksh.1,500</div>
-                  <button class="add-to-cart">
-                    <i class="fas fa-file-alt"></i> Quote
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="text-align: center; margin-top: 50px">
-            <a href="#" class="btn btn-primary">View All Products</a>
-          </div>
-        </div>
-      </section>
+<br>
+<br>
+<br>
+      
 
       <!-- Why Choose Us -->
       <section class="why-us">
@@ -1477,71 +1203,7 @@
         </div>
       </section>
 
-      <!-- Testimonials -->
-      <section class="testimonials">
-        <div class="container">
-          <div class="section-title">
-            <h2>What Our Clients Say</h2>
-            <p>Hear from healthcare providers who trust Kibellan Solutions</p>
-          </div>
-
-          <div class="testimonial-slider swiper">
-            <div class="swiper-wrapper">
-              <div class="testimonial-card swiper-slide">
-                <p class="testimonial-text">
-                  "Kibellan Solutions has been our trusted medical supplier for
-                  over 5 years. Their reliable delivery and quality products
-                  have been crucial for our hospital operations."
-                </p>
-                <div class="testimonial-author">
-                  <div class="author-avatar">SJ</div>
-                  <div class="author-info">
-                    <h4>Dr. Sarah Johnson</h4>
-                    <div class="author-role">
-                      Medical Director, City General Hospital
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonial-card swiper-slide">
-                <p class="testimonial-text">
-                  "As an NGO working in remote areas, we need a supplier that
-                  can deliver quality medical supplies anywhere. Kibellan has
-                  never let us down."
-                </p>
-                <div class="testimonial-author">
-                  <div class="author-avatar">MT</div>
-                  <div class="author-info">
-                    <h4>Michael Thompson</h4>
-                    <div class="author-role">
-                      Logistics Manager, HealthAid International
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonial-card swiper-slide">
-                <p class="testimonial-text">
-                  "The pharmaceutical products we source from Kibellan Solutions
-                  always meet the highest quality standards. Their documentation
-                  and compliance are impeccable."
-                </p>
-                <div class="testimonial-author">
-                  <div class="author-avatar">AR</div>
-                  <div class="author-info">
-                    <h4>Anna Rodriguez</h4>
-                    <div class="author-role">
-                      Procurement Manager, MediPharm Inc.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
+     
 
       <!-- Trust Signals -->
       <section class="trust-signals">
@@ -1680,222 +1342,10 @@
       >
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const mobileMenuBtn = document.getElementById("mobile-menu-toggle");
-        const navMenu = document.getElementById("nav-menu");
-
-        mobileMenuBtn.addEventListener("click", () => {
-          navMenu.classList.toggle("active");
-        });
-      });
-
-      // Header scroll effect
-      window.addEventListener("scroll", function () {
-        const header = document.getElementById("header");
-        if (window.scrollY > 50) {
-          header.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
-        }
-      });
-
-      // Mobile menu toggle functionality
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-        const navMenu = document.querySelector("nav ul");
-        const body = document.querySelector("body");
-
-        // Toggle mobile menu
-        mobileMenuBtn.addEventListener("click", function () {
-          navMenu.classList.toggle("active");
-          mobileMenuBtn.classList.toggle("active");
-          body.classList.toggle("menu-open");
-        });
-
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll("nav ul li a");
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            navMenu.classList.remove("active");
-            mobileMenuBtn.classList.remove("active");
-            body.classList.remove("menu-open");
-          });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener("click", function (e) {
-          if (
-            !e.target.closest("nav") &&
-            !e.target.closest(".mobile-menu-btn")
-          ) {
-            navMenu.classList.remove("active");
-            mobileMenuBtn.classList.remove("active");
-            body.classList.remove("menu-open");
-          }
-        });
-
-        // Hero animation
-        const heroAnimation = document.getElementById("hero-animation");
-
-        // Create floating elements
-        for (let i = 0; i < 20; i++) {
-          const element = document.createElement("div");
-          element.classList.add("floating-element");
-
-          // Random size and position
-          const size = Math.random() * 30 + 10;
-          element.style.width = `${size}px`;
-          element.style.height = `${size}px`;
-          element.style.left = `${Math.random() * 100}%`;
-          element.style.top = `${Math.random() * 100}%`;
-
-          // Random animation duration
-          const duration = Math.random() * 20 + 10;
-          element.style.animation = `float ${duration}s infinite ease-in-out`;
-          element.style.animationDelay = `${Math.random() * 5}s`;
-
-          heroAnimation.appendChild(element);
-        }
-
-        // Create pulse elements
-        for (let i = 0; i < 5; i++) {
-          const pulse = document.createElement("div");
-          pulse.classList.add("pulse-element");
-
-          // Random size and position
-          const size = Math.random() * 100 + 50;
-          pulse.style.width = `${size}px`;
-          pulse.style.height = `${size}px`;
-          pulse.style.left = `${Math.random() * 100}%`;
-          pulse.style.top = `${Math.random() * 100}%`;
-
-          // Random animation duration
-          const duration = Math.random() * 5 + 3;
-          pulse.style.animation = `pulse ${duration}s infinite ease-in-out`;
-          pulse.style.animationDelay = `${Math.random() * 2}s`;
-
-          heroAnimation.appendChild(pulse);
-        }
-
-        // Initialize testimonial slider
-        const swiper = new Swiper(".testimonial-slider", {
-          loop: true,
-          autoplay: {
-            delay: 5000,
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-
-        // Counter animation
-        function animateCounter(elementId, finalValue, duration) {
-          const element = document.getElementById(elementId);
-          const startValue = 0;
-          const increment = Math.ceil(finalValue / (duration / 16)); // 16ms per frame
-          let currentValue = startValue;
-
-          const timer = setInterval(() => {
-            currentValue += increment;
-            if (currentValue >= finalValue) {
-              clearInterval(timer);
-              currentValue = finalValue;
-            }
-            element.textContent = currentValue;
-          }, 16);
-        }
-
-        // Start counters when partnership section is in view
-        const partnershipSection = document.querySelector(".partnership");
-        if (partnershipSection) {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  animateCounter("counter-1", 50, 2000);
-                  animateCounter("counter-2", 500, 2000);
-                  animateCounter("counter-3", 250, 2000);
-                  observer.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.5 }
-          );
-
-          observer.observe(partnershipSection);
-        }
-
-        // Product category filtering
-        const categoryButtons = document.querySelectorAll(".category-btn");
-        categoryButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            // Remove active class from all buttons
-            categoryButtons.forEach((btn) => btn.classList.remove("active"));
-
-            // Add active class to clicked button
-            this.classList.add("active");
-
-            // Here you would normally filter products
-            // For this demo, we'll just simulate it with a console log
-            console.log(`Filtering by: ${this.textContent}`);
-          });
-        });
-
-        // Add to cart/quote animation
-        const addToCartButtons = document.querySelectorAll(".add-to-cart");
-        addToCartButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            this.innerHTML = '<i class="fas fa-check"></i> Added';
-            setTimeout(() => {
-              this.innerHTML = '<i class="fas fa-file-alt"></i> Quote';
-            }, 2000);
-          });
-        });
-
-        // Show specific page
-        function showPage(pageId) {
-          // Hide all pages
-          document.querySelectorAll(".page-content").forEach((page) => {
-            page.style.display = "none";
-          });
-          console.log("Attemting to show page with ID");
-
-          // Show selected page
-          document.getElementById(pageId).style.display = "block";
-
-          // Scroll to top
-          window.scrollTo(0, 0);
-        }
-
-        // Form submission
-        const forms = document.querySelectorAll("form");
-        forms.forEach((form) => {
-          form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert(
-              "Thank you for your submission! In a real application, this would send your data to our server."
-            );
-            this.reset();
-          });
-        });
-      });
-      const mobileMenuBtn = document.getElementById("mobile-menu-toggle");
-      const navMenu = document.getElementById("nav-menu");
-
-      mobileMenuBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const mobileMenuBtn = document.getElementById("mobile-menu-toggle");
-        const navMenu = document.getElementById("nav-menu");
-
-        mobileMenuBtn.addEventListener("click", () => {
-          navMenu.classList.toggle("active");
-        });
-      });
-    </script>
+    <script
+      src="index.js"
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+    ></script>
+    <script></script>
   </body>
 </html>
