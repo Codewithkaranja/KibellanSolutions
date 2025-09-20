@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (modalQuoteInline) {
       modalQuoteInline.onclick = () => {
         alert(
-          `Thanks — a Kibellan representative will contact you shortly about: ${name}`
+          `Thanks — Kibellan Solutions will contact you shortly about: ${name}`
         );
       };
     }
