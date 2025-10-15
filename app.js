@@ -78,12 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (modalQuoteInline) {
-      modalQuoteInline.onclick = () => {
-        alert(
-          `Thanks — Kibellan Solutions will contact you shortly about: ${name}`
-        );
-      };
-    }
+  modalQuoteInline.onclick = () => {
+    // Redirect to PayWithMe page
+    window.location.href = "https://codewithkaranja.github.io/kibellan-Pay/";
+  };
+}
+
 
     modal.classList.add("active");
     modal.setAttribute("aria-hidden", "false");
