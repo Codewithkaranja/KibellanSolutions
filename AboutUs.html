@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Essential Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO -->
+    <title>About Us | Kibellan Universal Solutions Kenya</title>
+    <meta
+      name="description"
+      content="Learn more about Kibellan Universal Solutions — Kenya’s leading supplier of dialysis and kidney treatment products. Trusted by hospitals and clinics nationwide."
+    />
+    <meta
+      name="keywords"
+      content="Kibellan Universal Solutions, dialysis supplies Kenya, kidney treatment products, medical equipment Nairobi, Heparin, Dialyzers, Wepox"
+    />
+    <meta name="author" content="Kibellan Universal Solutions" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="KE" />
+    <meta name="geo.placename" content="Nairobi" />
+    <meta name="geo.position" content="-1.286389;36.817223" />
+    <meta name="ICBM" content="-1.286389,36.817223" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="About Kibellan Universal Solutions | Kidney & Dialysis Products Kenya"
+    />
+    <meta
+      property="og:description"
+      content="Kibellan Universal Solutions is a Kenyan-based medical supplier specializing in dialysis and kidney treatment products. Quality. Reliability. Care."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.kibellanuniversalsolutions.co.ke/about.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.kibellanuniversalsolutions.co.ke/images/og-image.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="About Kibellan Universal Solutions Kenya"
+    />
+    <meta
+      name="twitter:description"
+      content="Leading supplier of kidney and dialysis supplies in Kenya. Learn more about our mission and commitment to better healthcare."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.kibellanuniversalsolutions.co.ke/images/og-image.jpg"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Styles & Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Kibellan Universal Solutions",
+        "url": "https://www.kibellanuniversalsolutions.co.ke",
+        "logo": "https://www.kibellanuniversalsolutions.co.ke/images/logo.png",
+        "description": "Kibellan Universal Solutions is a registered Kenyan medical supplier offering dialysis and kidney treatment products to hospitals and clinics nationwide.",
+        "foundingDate": "2018",
+        "founder": {
+          "@type": "Person",
+          "name": "Dr. Kevin Njoroge"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kibellan House, Mombasa Road",
+          "addressLocality": "Nairobi",
+          "postalCode": "00100",
+          "addressCountry": "KE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+254704498509",
+          "contactType": "Customer Service",
+          "areaServed": "KE",
+          "availableLanguage": "en"
+        },
+        "sameAs": [
+          "https://www.facebook.com/kibellan",
+          "https://www.linkedin.com/company/kibellan"
+        ]
+      }
+    </script>
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===================== GLOBAL STYLES ===================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        background: url("https://images.unsplash.com/photo-1585421514738-01798e348b17?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWVkaWNhbHxlbnwwfHwwfHx8MA%3D%3D")
+          no-repeat center center/cover;
+        color: #333;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* ===================== NAVBAR ===================== */
+      header {
+        background: #0077cc;
+        color: #fff;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: black;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          position: absolute;
+          top: 65px;
+          right: 0;
+          background: #003366;
+          flex-direction: column;
+          width: 220px;
+          display: none;
+          padding: 20px;
+          border-radius: 0 0 8px 8px;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+
+      /* ===================== SECTION TITLES ===================== */
+      .section-title {
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      .section-title h2 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #0077cc;
+        margin-bottom: 10px;
+      }
+
+      .section-title p {
+        font-size: 1.1rem;
+        color: black;
+      }
+
+      /* ===================== ABOUT CONTENT ===================== */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 60px;
+      }
+
+      .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #e6f0fa;
+        border-radius: 20px;
+        padding: 30px;
+      }
+
+      .about-image i {
+        color: #0077cc;
+        font-size: 5rem;
+      }
+
+      .about-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #0077cc;
+      }
+
+      .about-content p {
+        margin-bottom: 15px;
+        color: black;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #0077cc;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #005fa3;
+      }
+
+      /* ===================== FEATURE CARDS ===================== */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: black;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: #0077cc;
+        margin-bottom: 15px;
+      }
+
+      .feature-card h3 {
+        color: #0077cc;
+        margin-bottom: 10px;
+      }
+
+      .feature-card p {
+        color: white;
+        font-size: 0.95rem;
+      }
+
+      /* ===================== FOOTER ===================== */
+      footer {
+        background: #003366;
+        color: #fff;
+        padding: 60px 0 20px;
+        margin-top: 80px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-column h3 {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        border-left: 4px solid #0077cc;
+        padding-left: 10px;
+      }
+
+      .footer-column p,
+      .footer-links li {
+        font-size: 0.95rem;
+        color: #ddd;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: #ddd;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: #fff;
+      }
+
+      .newsletter {
+        display: flex;
+        gap: 10px;
+      }
+
+      .newsletter input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .newsletter button {
+        background: #0077cc;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .newsletter button:hover {
+        background: #005fa3;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-size: 0.85rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 15px;
+      }
+
+      /* ===================== STICKY QUOTE ===================== */
+      .sticky-quote {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: rgb(33, 216, 33);
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        z-index: 999;
+      }
+      .sticky-quote p {
+        color: white;
+      }
+
+      .sticky-quote:hover {
+        background: green;
+      }
+
+      /* ===================== RESPONSIVE ===================== */
+      @media (max-width: 768px) {
+        .about-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .about-image {
+          margin-bottom: 20px;
+        }
+
+        .newsletter {
+          flex-direction: column;
+        }
+
+        .newsletter input,
+        .newsletter button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="logo"
+          >Kibellan Universal
+          <span style="color: rgb(247, 4, 247)">Solutions</span></a
+        >
+        <i class="fas fa-bars hamburger" id="hamburger"></i>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="Partnerships.html">Partnerships</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- About Us Page -->
+    <section id="about-page" class="page-content">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Kibellan Universal Solutions</h2>
+          <p>Your trusted partner in healthcare supply chain management</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-image">
+            <i class="fas fa-history"></i>
+          </div>
+          <div>
+            <h3>Our Story</h3>
+            <p>
+              Founded in 2015, Kibellan Universal Solutions has grown from a
+              small medical supplier to a global healthcare solutions provider.
+              Our mission has always been to ensure that quality healthcare
+              products are accessible to everyone, everywhere.
+            </p>
+            <p>
+              We partner with manufacturers, healthcare providers, and NGOs to
+              create efficient supply chains that deliver critical medical
+              supplies where they're needed most.
+            </p>
+            <a href="Partnerships.html" class="btn" style="margin-top: 20px"
+              >Learn More About Us</a
+            >
+          </div>
+        </div>
+
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>Our Vision</h3>
+            <p>
+              To be the world's most trusted healthcare supply partner, enabling
+              better health outcomes through reliable access to quality medical
+              products.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Our Mission</h3>
+            <p>
+              To provide healthcare institutions with reliable, affordable, and
+              high-quality medical supplies through efficient logistics and
+              ethical business practices.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Our Values</h3>
+            <p>
+              Quality, Integrity, Reliability, and Innovation are the core
+              values that guide everything we do at Kibellan Universal
+              Solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Kibellan Universal Solutions</h3>
+            <p>
+              Supplying quality healthcare products and medical supplies to
+              institutions worldwide.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Products</a
+                >
+              </li>
+              <li>
+                <a href="AboutUs.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="Partnerships.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Partnerships</a
+                >
+              </li>
+              <li>
+                <a href="contacts.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/akamba+building+machakos/@-1.5208329,37.2677628,80m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDkxNi4wIKXMDSoASAFQAw%3D%3D"
+                  ><i class="fas fa-map-marker-alt"></i> 3rd Floor,Akamba
+                  Building, Machakos Town
+                </a>
+              </li>
+              <li>
+                <a href="tel:+254112450228"
+                  ><i class="fas fa-phone"></i> +254 112 450228</a
+                >
+              </li>
+              <li>
+                <a href="mailto:kibellansolutions@gmail.com">
+                  <i class="fas fa-envelope"></i> info@kibellansolutions.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>
+              Subscribe to our newsletter for updates on new products and
+              industry insights.
+            </p>
+            <div class="newsletter">
+              <input type="email" placeholder="Your email address" />
+
+              <a href="Partnerships.html"><button>Subscribe</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Kibellan Universal Solutions. All rights reserved.</p>
+          <p style="margin: 0; font-size: 13px; color: #777">
+            Crafted with <span style="color: red">❤</span> by
+            <a
+              href="https://wa.me/254723562484?text=Hello%20there,%20I%20Need%20a%20Website"
+              target="_blank"
+              style="color: #0077cc; text-decoration: none; font-weight: 500"
+            >
+              @Saraha_Devs
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sticky Quote Button -->
+    <div class="sticky-quote">
+      <a
+        href="https://wa.me/254704498509?text=Hello%20Kibellan%20Solutions,%20I%20Need%20a%20Quote"
+        ><i class="fa-brands fa-whatsapp"></i> Chat With Us</a
+      >
+    </div>
+
+    <!-- ===================== JAVASCRIPT ===================== -->
+    <script>
+      // Mobile nav toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Smooth scroll for "Request a Quote" button
+      document
+        .getElementById("quote-btn")
+        .addEventListener("click", function () {
+          location.href = "contacts.html";
+        });
+
+      // Newsletter subscribe button
+      document
+        .getElementById("subscribe-btn")
+        .addEventListener("click", function () {
+          const email = document.getElementById("newsletter-email").value;
+          if (email.trim() === "") {
+            alert("Please enter your email address.");
+          } else {
+            alert("Thank you for subscribing, " + email + "!");
+            document.getElementById("newsletter-email").value = "";
+          }
+        });
+    </script>
+  </body>
+</html>
