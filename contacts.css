@@ -82,7 +82,7 @@
       }
       nav ul li a:hover,
       nav ul li a.active {
-        background: rgba(255, 255, 255, 0.2);
+        background: #027df8;
       }
       .hamburger {
         display: none;
@@ -95,7 +95,7 @@
           position: absolute;
           top: 60px;
           right: 0;
-          background: rgba(2, 124, 223, 0.986);
+          background: rgba(0, 6, 10, 0.986);
           flex-direction: column;
           width: 200px;
           padding: 10px 0;

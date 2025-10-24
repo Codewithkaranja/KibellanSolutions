@@ -56,7 +56,7 @@
       }
 
       .nav-links a:hover {
-        color: black;
+        color: #0080ff;
       }
 
       .hamburger {
@@ -70,7 +70,7 @@
           position: absolute;
           top: 65px;
           right: 0;
-          background: #003366;
+          background: #00050a;
           flex-direction: column;
           width: 220px;
           display: none;

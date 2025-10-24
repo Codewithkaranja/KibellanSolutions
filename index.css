@@ -110,7 +110,7 @@ nav ul li a {
   transition: color 0.3s;
 }
 nav ul li a:hover {
-  color: black;
+  color: blue;
 }
 
 /* CTA Button */
@@ -837,7 +837,7 @@ nav ul li a:hover {
         position: fixed;
         bottom: 30px;
         right: 30px;
-        background: var(--gradient-primary);
+        background: rgb(248, 2, 248);
         color: white;
         padding: 15px 25px;
         border-radius: 50px;
@@ -854,6 +854,7 @@ nav ul li a:hover {
       .sticky-quote:hover {
         transform: translateY(-5px);
         background: var(--gradient-secondary);
+        
       }
 
       /* Page Content */
