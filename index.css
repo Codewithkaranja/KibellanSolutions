@@ -1,4 +1,5 @@
    :root {
+        --header-height: 90px;
         --primary: #1a75ff;
         --primary-dark: #0052cc;
         --primary-light: #4d94ff;
@@ -69,8 +70,7 @@
       /* ================= HEADER ================= */
 header {
   position: fixed;
-  top:0px;
- height: 90px;
+  top: 0;
   width: 100%;
   z-index: 100;
   background: black;
@@ -79,10 +79,11 @@ header {
   transition: background 0.3s;
 }
 
+/* Ensure content spacing (controls header height) */
 .header-container {
   max-width: 1200px;
   margin: auto;
-  padding: 15px 20px;
+  padding: 18px 20px; /* ✅ this controls height */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -229,16 +230,15 @@ nav ul li a:hover {
      /* ================= HERO (UPGRADED) ================= */
 .hero {
   position: relative;
-  height: 100dvh; /* Dynamic viewport height */
-min-height: 100vh; /* Safe fallback */
- display: flex;
+  height: calc(100vh - var(--header-height)); /* Adjust to fit visible space */
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
   overflow: hidden;
-  margin-top: 0 !important;
-  padding-top: 90px; /* ✅ Match header height */
+  margin-top: var(--header-height); /* ✅ Consistent gap */
 }
 
 
