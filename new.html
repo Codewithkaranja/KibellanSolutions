@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kibellan Universal Solutions - Healthcare Supply</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* ========== CSS VARIABLES ========== */
+      :root {
+        --primary: #1a73e8;
+        --primary-dark: #0d47a1;
+        --secondary: #9c27b0;
+        --accent: #f704f7;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --gray: #6c757d;
+        --light-gray: #e9ecef;
+        --success: #28a745;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      /* ========== RESET & BASE STYLES ========== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        background-color: #fff;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        transition: var(--transition);
+        cursor: pointer;
+        border: none;
+        font-size: 16px;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--box-shadow);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: var(--box-shadow);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: var(--dark);
+      }
+
+      .section-title p {
+        font-size: 1.1rem;
+        color: var(--gray);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* ========== HEADER STYLES ========== */
+      #header {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-icon {
+        background-color: var(--primary);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      .logo-text h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+      }
+
+      #navMenu {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+      }
+
+      #navMenu li a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      #navMenu li a:hover {
+        color: var(--primary);
+      }
+
+      #navMenu li a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary);
+        transition: var(--transition);
+      }
+
+      #navMenu li a:hover::after {
+        width: 100%;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--dark);
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 15px;
+      }
+
+      /* ========== HERO SECTION ========== */
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://plus.unsplash.com/premium_photo-1672759455911-d51421fe442c?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTczfHxtZWRpY2FsJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww")
+            center/cover no-repeat;
+        color: white;
+        padding: 180px 0 100px;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        font-weight: 800;
+      }
+
+      .hero-tagline {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+        letter-spacing: 1px;
+      }
+
+      .hero-tagline span {
+        display: inline-block;
+        margin: 0 10px;
+        position: relative;
+      }
+
+      .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .hero-buttons .btn {
+        min-width: 180px;
+      }
+
+      /* ========== TRUST BADGES ========== */
+      .trust-badges {
+        background-color: var(--light);
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .trust-badges h3 {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+        color: var(--dark);
+      }
+
+      .badges-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .badge {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        max-width: 150px;
+      }
+
+      .badge-icon {
+        background-color: white;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: var(--primary);
+        box-shadow: var(--box-shadow);
+      }
+
+      .badge span {
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      /* ========== WHY CHOOSE US ========== */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .feature-card {
+        background-color: white;
+        padding: 40px 30px;
+        border-radius: var(--border-radius);
+        text-align: center;
+        box-shadow: var(--box-shadow);
+        transition: var(--transition);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .feature-icon {
+        background-color: var(--light);
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        font-size: 30px;
+        color: var(--primary);
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: var(--dark);
+      }
+
+      .feature-card p {
+        color: var(--gray);
+      }
+
+      /* ========== PARTNERSHIP SECTION ========== */
+      .partnership {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .partnership-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.05;
+        font-size: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .partnership h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .partnership p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 50px;
+        position: relative;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+        position: relative;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      /* ========== TRUST SIGNALS ========== */
+      .trust-signals {
+        background-color: var(--light);
+        padding: 80px 0;
+      }
+
+      .trust-logos {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .trust-logo {
+        background-color: white;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: var(--primary);
+        box-shadow: var(--box-shadow);
+        transition: var(--transition);
+      }
+
+      .trust-logo:hover {
+        transform: scale(1.1);
+      }
+
+      /* ========== FOOTER ========== */
+      footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 80px 0 20px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+
+      .footer-column h3 {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-column h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background-color: var(--primary);
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: #bbb;
+        text-decoration: none;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-links a:hover {
+        color: white;
+        transform: translateX(5px);
+      }
+
+      .footer-links i {
+        font-size: 12px;
+        color: var(--primary);
+      }
+
+      .newsletter {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .newsletter input {
+        flex: 1;
+        padding: 12px 15px;
+        border: none;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+        font-size: 16px;
+      }
+
+      .newsletter button {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 0 20px;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .newsletter button:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #444;
+        padding-top: 20px;
+        text-align: center;
+        color: #bbb;
+        font-size: 14px;
+      }
+
+      .footer-bottom a {
+        color: #4fc3f7;
+        text-decoration: none;
+      }
+
+      .footer-bottom a:hover {
+        text-decoration: underline;
+      }
+
+      /* ========== STICKY QUOTE BUTTON ========== */
+      .sticky-quote {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 100;
+      }
+
+      .sticky-quote a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #25d366;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: var(--transition);
+      }
+
+      .sticky-quote a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      /* ========== ANIMATIONS ========== */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .reveal-delay {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+
+      /* ========== RESPONSIVE STYLES ========== */
+      @media (max-width: 992px) {
+        .hero-content h1 {
+          font-size: 2.8rem;
+        }
+
+        .section-title h2 {
+          font-size: 2.2rem;
+        }
+
+        .partnership h2 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        #navMenu {
+          position: fixed;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background-color: white;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px 0;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          transform: translateY(-100%);
+          opacity: 0;
+          transition: var(--transition);
+          z-index: 999;
+        }
+
+        #navMenu.active {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        .hero-content h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero-tagline {
+          font-size: 1.2rem;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-buttons .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
+
+        .partnership h2 {
+          font-size: 1.8rem;
+        }
+
+        .stat-number {
+          font-size: 2.5rem;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero {
+          padding: 150px 0 80px;
+        }
+
+        .hero-content h1 {
+          font-size: 1.8rem;
+        }
+
+        .logo-text h2 {
+          font-size: 1.2rem;
+        }
+
+        .header-actions {
+          display: none;
+        }
+
+        .badges-container {
+          gap: 20px;
+        }
+
+        .badge {
+          max-width: 120px;
+        }
+
+        .badge-icon {
+          width: 60px;
+          height: 60px;
+          font-size: 24px;
+        }
+
+        .trust-logo {
+          width: 80px;
+          height: 80px;
+          font-size: 30px;
+        }
+
+        .newsletter {
+          flex-direction: column;
+        }
+
+        .newsletter input {
+          border-radius: var(--border-radius);
+          margin-bottom: 10px;
+        }
+
+        .newsletter button {
+          border-radius: var(--border-radius);
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <!-- Logo -->
+        <div class="logo">
+          <div class="logo-icon"><i class="fas fa-plus"></i></div>
+          <div class="logo-text">
+            <h2>
+              Kibellan Universal
+              <span style="color: var(--accent)">Solutions</span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <!-- Hamburger -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Menu -->
+          <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="Partnerships.html">Partnerships</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- CTA -->
+        <div class="header-actions">
+          <a href="contacts.html" class="btn btn-primary">Get Quote</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home-page" class="page-content">
+      <div class="hero">
+        <div class="container hero-content">
+          <h1>Kibellan Universal Solutions</h1>
+          <p class="hero-tagline reveal-delay">
+            <span>Trust</span> ★ <span>Heal</span> ★ <span>Thrive</span>
+          </p>
+          <div class="hero-buttons">
+            <a href="products.html" class="btn btn-primary">Browse Products</a>
+            <a href="contacts.html" class="btn btn-outline">Chat With Us</a>
+            <a href="Partnerships.html" class="btn btn-outline"
+              >Partner With Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+      <div class="container">
+        <h3>Trusted by Healthcare Providers Worldwide</h3>
+        <div class="badges-container">
+          <div class="badge">
+            <div class="badge-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <span>ISO Certified</span>
+          </div>
+          <div class="badge">
+            <div class="badge-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <span>Global Supply</span>
+          </div>
+          <div class="badge">
+            <div class="badge-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <span>Quality Assured</span>
+          </div>
+          <div class="badge">
+            <div class="badge-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <span>Fast Delivery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+      <div class="container">
+        <div class="section-title">
+          <h2>Why Choose Kibellan Universal Solutions</h2>
+          <p>
+            We are committed to excellence in healthcare supply chain management
+          </p>
+        </div>
+
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-globe-americas"></i>
+            </div>
+            <h3>Global Sourcing</h3>
+            <p>
+              We source quality products from trusted manufacturers worldwide
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-tags"></i>
+            </div>
+            <h3>Affordable Pricing</h3>
+            <p>
+              Competitive pricing for bulk orders and long-term partnerships
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h3>Reliable Delivery</h3>
+            <p>
+              Efficient logistics network ensuring timely delivery worldwide
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3>Certified Quality</h3>
+            <p>
+              All products meet international quality standards and
+              certifications
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="partnership">
+      <div class="partnership-bg">
+        <i class="fas fa-heartbeat"></i>
+      </div>
+      <div class="container">
+        <h2>
+          Supplying Healthcare for Hospitals, Pharmacies, and NGOs Worldwide
+        </h2>
+        <p>
+          Join our network of satisfied healthcare providers and experience the
+          Kibellan difference
+        </p>
+
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-number" id="counter-1">0</div>
+            <div class="stat-label">Countries Supplied</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" id="counter-2">0</div>
+            <div class="stat-label">Products Available</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" id="counter-3">0</div>
+            <div class="stat-label">Satisfied Clients</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" id="counter-4">100</div>
+            <div class="stat-label">Quality Assurance</div>
+          </div>
+        </div>
+
+        <a href="Partnerships.html" class="btn btn-primary">Become a Partner</a>
+      </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-signals">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Certifications & Partners</h2>
+          <p>Committed to quality, safety, and compliance</p>
+        </div>
+
+        <div class="trust-logos">
+          <div class="trust-logo">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+          <div class="trust-logo">
+            <i class="fas fa-hospital"></i>
+          </div>
+          <div class="trust-logo">
+            <i class="fas fa-clinic-medical"></i>
+          </div>
+          <div class="trust-logo">
+            <i class="fas fa-prescription"></i>
+          </div>
+          <div class="trust-logo">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Kibellan Universal Solutions</h3>
+            <p>
+              Supplying quality healthcare products and medical supplies to
+              institutions worldwide.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Products</a
+                >
+              </li>
+              <li>
+                <a href="AboutUs.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="Partnerships.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Partnerships</a
+                >
+              </li>
+              <li>
+                <a href="contacts.html" class="nav-link"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/Kamba+building+machakos/@-1.5208329,37.2677628,80m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDkxNi4wIKXMDSoASAFQAw%3D%3D"
+                >
+                  <i class="fas fa-map-marker-alt"></i> 3rd Floor,Kamba
+                  Building, Machakos Town
+                </a>
+              </li>
+              <li>
+                <a href="tel:+254704498509"
+                  ><i class="fas fa-phone"></i> +254 704 498509</a
+                >
+              </li>
+              <li>
+                <a href="mailto:kibellanuniversalsolutions@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                  kibellanuniversalsolutions@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>
+              Subscribe to our newsletter for updates on new products and
+              industry insights.
+            </p>
+            <div class="newsletter">
+              <input type="email" placeholder="Your email address" />
+              <a href="Partnerships.html"><button>Subscribe</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Kibellan Universal Solutions. All rights reserved.</p>
+          <p style="margin: 0; font-size: 13px; color: #777">
+            Crafted with <span style="color: red">❤</span> by
+            <a
+              href="https://wa.me/254723562484?text=Hello%20there,%20I%20Need%20a%20Website"
+              target="_blank"
+              style="
+                color: rgb(3, 184, 245);
+                text-decoration: none;
+                font-weight: 500;
+              "
+            >
+              @Saraha_Devs
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sticky Quote Button -->
+    <div class="sticky-quote">
+      <a
+        href="https://wa.me/254704498509?text=Hello%20Kibellan%20Solutions,%20I%20Need%20a%20Quote"
+      >
+        <i class="fa-brands fa-whatsapp"></i> Chat With Us
+      </a>
+    </div>
+
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", function () {
+          document.getElementById("navMenu").classList.toggle("active");
+        });
+
+      // Counter Animation
+      function animateCounter(id, target, duration) {
+        let element = document.getElementById(id);
+        let start = 0;
+        let increment = target / (duration / 16); // 60fps
+        let current = 0;
+
+        let timer = setInterval(function () {
+          current += increment;
+          if (current >= target) {
+            clearInterval(timer);
+            current = target;
+          }
+          element.textContent = Math.floor(current);
+        }, 16);
+      }
+
+      // Initialize counters when page loads
+      window.addEventListener("load", function () {
+        animateCounter("counter-1", 25, 2000);
+        animateCounter("counter-2", 150, 2000);
+        animateCounter("counter-3", 300, 2000);
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll("#navMenu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("navMenu").classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
