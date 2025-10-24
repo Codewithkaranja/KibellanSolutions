@@ -81,6 +81,24 @@ document.addEventListener("DOMContentLoaded", () => {
       heroAnimation.appendChild(pulse);
     }
   }
+  // =====================
+// Hero Background Slider
+// =====================
+const hero = document.querySelector(".hero");
+
+const heroImages = [
+  "https://plus.unsplash.com/premium_photo-1672759455911-d51421fe442c?w=1200&auto=format&fit=crop&q=60",
+  "https://images.unsplash.com/photo-1690787628851-d36e285c29b0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjMwfHxoZWFsdGhjYXJlJTIwYW5kJTIwbWVkaWNpbmUlMjAzRHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
+  "https://plus.unsplash.com/premium_photo-1672759455907-bdaef741cd88?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE3fHxoZWFsdGhjYXJlJTIwYW5kJTIwbWVkaWNpbmUlMjAzRHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500"
+];
+
+let currentImageIndex = 0;
+
+setInterval(() => {
+  currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+  hero.style.setProperty("--hero-bg", `url(${heroImages[currentImageIndex]})`);
+}, 3000); // changes every 3 seconds
+
 
   // =====================
   // Testimonial Slider
@@ -99,43 +117,45 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =====================
-  // Counters
   // =====================
-  function animateCounter(elementId, finalValue, duration) {
-    const element = document.getElementById(elementId);
-    if (!element) return;
+// Counters Animation
+// =====================
+function animateCounter(elementId, finalValue, duration, suffix = "+") {
+  const element = document.getElementById(elementId);
+  if (!element) return;
 
-    const startValue = 0;
-    const increment = Math.ceil(finalValue / (duration / 16));
-    let currentValue = startValue;
+  const startValue = 0;
+  const increment = Math.ceil(finalValue / (duration / 16));
+  let currentValue = startValue;
 
-    const timer = setInterval(() => {
-      currentValue += increment;
-      if (currentValue >= finalValue) {
-        clearInterval(timer);
-        currentValue = finalValue;
-      }
-      element.textContent = currentValue;
-    }, 16);
-  }
+  const timer = setInterval(() => {
+    currentValue += increment;
+    if (currentValue >= finalValue) {
+      clearInterval(timer);
+      currentValue = finalValue;
+    }
+    element.textContent = currentValue + suffix;
+  }, 16);
+}
 
-  const partnershipSection = document.querySelector(".partnership");
-  if (partnershipSection) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateCounter("counter-1", 50, 2000);
-            animateCounter("counter-2", 500, 2000);
-            animateCounter("counter-3", 250, 2000);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-    observer.observe(partnershipSection);
-  }
+const statsSection = document.querySelector(".stats");
+if (statsSection) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter("counter-1", 50, 2000, "+");
+          animateCounter("counter-2", 250, 2000, "+");
+          animateCounter("counter-3", 500, 2000, "+");
+          animateCounter("counter-4", 100, 2000, "%");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+  observer.observe(statsSection);
+}
 
   // =====================
   // Product category filtering

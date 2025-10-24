@@ -33,18 +33,12 @@
   <meta name="twitter:image" content="https://www.kibellanuniversalsolutions.co.ke/images/og-image.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  
 
   <!-- Styles & Icons -->
   <!-- Font Awesome (Icons) -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-6v6cl1dG4QyPhYh6jTo0dlWDBvA3Z8vVhSmH4UMutwKcvEw6vYIM1/1yvnG6Uo+eC9Y8Tu8F8xFMvJ0F3Xz4bQ=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
- <link rel="stylesheet" href="styles.css" />
+
+
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -81,318 +75,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
 
-    <style>
-      /* ===== GLOBAL ===== */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        background: url("https://plus.unsplash.com/premium_photo-1679615911754-fafb37c81998?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1lZGljYWwlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D")
-          no-repeat center center/cover;
-        color: #333;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 50px 0;
-      }
-      h2,
-      h3 {
-        font-weight: 600;
-        color: #0072ce;
-      }
-      p {
-        color: white;
-      }
-      .btn {
-        padding: 12px 25px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 500;
-        transition: all 0.3s;
-        display: inline-block;
-        text-align: center;
-      }
-      .btn-primary {
-        background: #0072ce;
-        color: #fff;
-        border: none;
-      }
-      .btn-primary:hover {
-        background: #005bb5;
-      }
-
-      /* ===== NAVBAR ===== */
-      nav {
-        background: #0072ce;
-        padding: 15px 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-      nav .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      nav .logo {
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
-      nav ul {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-      }
-      nav ul li a {
-        color: #fff;
-        font-weight: 500;
-        padding: 8px 12px;
-        border-radius: 5px;
-        transition: background 0.3s;
-      }
-      nav ul li a:hover,
-      nav ul li a.active {
-        background: rgba(255, 255, 255, 0.2);
-      }
-      .hamburger {
-        display: none;
-        font-size: 1.5rem;
-        color: #fff;
-        cursor: pointer;
-      }
-      @media (max-width: 768px) {
-        nav ul {
-          position: absolute;
-          top: 60px;
-          right: 0;
-          background: rgba(2, 124, 223, 0.986);
-          flex-direction: column;
-          width: 200px;
-          padding: 10px 0;
-          display: none;
-          border-radius: 8px;
-        }
-        nav ul.active {
-          display: flex;
-        }
-        .hamburger {
-          display: block;
-        }
-      }
-
-      /* ===== PAGE TITLE ===== */
-      .section-title {
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      .section-title h2 {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-      }
-      .section-title p {
-        font-size: 1.1rem;
-      }
-
-      /* ===== FEATURE CARDS ===== */
-      .about-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 40px;
-        align-items: start;
-      }
-      .feature-card {
-        background: rgba(0, 0, 0, 0.836);
-        padding: 30px 20px;
-        border-radius: 15px;
-        text-align: left;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-         text-decoration: underline;
-      }
-      .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 25px white;
-       
-
-      }
-      .feature-card h3 {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-      }
-      .feature-card h3 i {
-        color: #0072ce;
-      }
-
-      /* ===== FORM ===== */
-      .contact-form {
-        background: rgba(0, 0, 0, 0.815);
-        color: white;
-        padding: 30px 25px;
-        border-radius: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-      }
-      .contact-form h3 {
-        font-size: 2rem;
-        color: #0072ce;
-        margin-bottom: 30px;
-        text-align: center;
-      }
-      .form-group {
-        margin-bottom: 20px;
-      }
-      .form-control {
-        width: 100%;
-        padding: 12px 15px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        font-size: 1rem;
-        transition: border-color 0.3s;
-      }
-      .form-control:focus {
-        outline: none;
-        border-color: #0072ce;
-      }
-      textarea.form-control {
-        min-height: 120px;
-        resize: vertical;
-      }
-
-      /* ===== FOOTER ===== */
-      footer {
-        background: #111;
-        color: #fff;
-        padding: 50px 0 20px;
-      }
-      .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 30px;
-      }
-      .footer-column h3 {
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-        color: #fff;
-      }
-      .footer-links {
-        list-style: none;
-        padding: 0;
-      }
-      .footer-links li {
-        margin-bottom: 10px;
-      }
-      .footer-links li a {
-        font-size: 0.95rem;
-        color: #ccc;
-        transition: color 0.3s;
-      }
-      .footer-links li a:hover {
-        color: #0072ce;
-      }
-      .newsletter {
-        display: flex;
-        gap: 10px;
-        margin-top: 10px;
-      }
-      .newsletter input {
-        flex: 1;
-        padding: 10px 15px;
-        border-radius: 8px;
-        border: none;
-      }
-      .newsletter button {
-        padding: 10px 20px;
-        border-radius: 8px;
-        border: none;
-        background: #0072ce;
-        color: #fff;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-      .newsletter button:hover {
-        background: #005bb5;
-      }
-      .footer-bottom {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 0.9rem;
-        color: #888;
-      }
-
-      /* ===== STICKY QUOTE ===== */
-      .sticky-quote {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background: rgb(33, 216, 33);
-        color: #fff;
-        padding: 15px 20px;
-        border-radius: 50px;
-        cursor: pointer;
-        font-size: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        z-index: 999;
-        transition: background 0.3s, transform 0.2s;
-      }
-      .sticky-quote:hover {
-        background: green;
-        transform: translateY(-3px);
-      }
-
-      @media (max-width: 768px) {
-        .about-content {
-          grid-template-columns: 1fr;
-        }
-      }
-      /* Float effect for cards */
-.float-card {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.float-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Adjust grid for responsiveness */
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-bottom: 30px;
-}
-@media (max-width: 768px) {
-  .contact-info {
-    grid-template-columns: 1fr;
-  }
-}
-
-    </style>
+    <link rel="stylesheet" href="contacts.css">
   </head>
   <body>
     <!-- NAVBAR -->
     <nav>
       <div class="nav-container">
-        <div class="logo"> <span>Kibellan</span> Universal   <span style="color:rgb(247, 4, 247)">Solutions</span></div>
+        <div class="logo">
+  <a href="index.html" class="logo-link">
+    <img src="WhatsApp Image 2025-10-24 at 07.34.45_6f97e47a.jpg" alt="Kibellan Universal Solutions Logo" class="logo-img" />
+  </a>
+</div>
+
         <div class="hamburger"><i class="fas fa-bars"></i></div>
         <ul>
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -605,34 +306,8 @@
     </div>
 
     <!-- JS -->
-    <script>
-      // Hamburger Menu
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector("nav ul");
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-
-      // Highlight Active Nav Link
-      const navLinks = document.querySelectorAll(".nav-link");
-      navLinks.forEach((link) => {
-        if (link.href === window.location.href) link.classList.add("active");
-      });
-
-      // Contact Form Submit
-      const form = document.getElementById("contact-form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert(
-          "Thank you! Your message has been sent. We will get back to you shortly."
-        );
-        form.reset();
-      });
-
-      // Sticky Quote Button Click
-      document.querySelector(".sticky-quote").addEventListener("click", () => {
-        window.location.href = "contacts.html";
-      });
+    <script src="contacts.js">
+      
     </script>
   </body>
 </html>
